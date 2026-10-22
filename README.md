@@ -2,7 +2,7 @@
 
 A steady state genetic algorithm I wrote from scratch and used on four problems, plus a genetic programming project built on DEAP that evolves maths expressions to fit a target curve. Everything is plain Python with numpy and matplotlib for the plots.
 
-![Genetic programming result: the evolved expression in red over the target polynomial in black](media/figures/gp-best-solution-vs-target-problem1.png)
+![Genetic programming result from a fresh run: the evolved expression in red over the target polynomial in black, best mean squared error 13.8](media/figures/gp-best-solution-vs-target-problem1.png)
 
 ## What it does
 
@@ -39,9 +39,9 @@ Each bit is one pixel. In my first runs I used a population of 200, crossover 0.
 
 ### Hyperparameter sweep
 
-Population 50, 100 and 200, crossover 0.6, 0.8 and 1.0, mutation 0.05, 0.1 and 0.2, every combination for 500 generations. One subplot per population size and crossover rate, one line per mutation rate. With the first version of the GA the combination that came out best was population 200, crossover 0.8 and mutation 0.1. With tournament selection the lowest mutation rate wins in every panel, which agrees with what I found on the ASCII art.
+Population 50, 100 and 200, crossover 0.6, 0.8 and 1.0, mutation 0.05, 0.1 and 0.2, every combination for 500 generations. One subplot per population size and crossover rate, one line per mutation rate. With the first version of the GA the combination that came out best was population 200, crossover 0.8 and mutation 0.1. Running the sweep again with tournament selection, the lowest mutation rate finished highest in eight of the nine panels, which agrees with what I found on the ASCII art. The one exception was population 200 with crossover 0.8, where mutation 0.1 ended on 104 against 103.
 
-![Fitness over 500 generations for population 200 and crossover 0.8, one line per mutation rate](media/figures/hyperparameter-sweep-pop200-crossover08.png)
+![All 27 runs of the sweep, fitness against generation, one panel per population size and crossover rate and one line per mutation rate](media/figures/hyperparameter-sweep.png)
 
 ### Sphere and Rosenbrock (binary optimisation demo)
 

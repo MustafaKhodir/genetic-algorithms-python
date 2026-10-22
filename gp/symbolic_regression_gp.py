@@ -147,6 +147,9 @@ def plot_comparison_Target_Vs_EvolvedSolution(HOF, Toolbox, InputPoints, TargetP
     y = [f(x) for x in InputPoints]
     plt.plot(InputPoints, y, 'r-', label='Best Solution')
     plt.plot(InputPoints, TargetPoints, 'k-', label='Target function')
+    plt.xlabel('x')
+    plt.ylabel('f(x)')
+    plt.title('Best evolved expression against the target')
     plt.legend(shadow=True, fontsize='x-large')
     plt.show()
 
