@@ -10,7 +10,7 @@ The first half is my own genetic algorithm library and four things I pointed it 
 
 - **ASCII art.** Evolves a 141 bit binary string until it matches a target picture printed 21 characters wide. Fitness is the number of bits that match.
 - **Hyperparameter sweep.** Runs the ASCII art GA with every combination of three population sizes, three crossover rates and three mutation rates (27 runs of 500 generations) and plots the fitness curves side by side.
-- **Function minimisation.** Minimises the Sphere function in 10 dimensions and the Rosenbrock function in 5 dimensions. Both reach the exact minimum of 0.
+- **Binary optimisation demo.** Minimises the Sphere function in 10 dimensions and the Rosenbrock function in 5 dimensions, with every variable restricted to 0 or 1. Both reach the exact minimum of 0.
 - **The Santa Claus riddle.** Finds digits for the letters in SANTA minus CLAUS equals XMAS, with every letter standing for a different digit.
 
 The second half is symbolic regression with genetic programming. The GP grows expression trees out of add, subtract, multiply, protected divide, negate, sin, cos and small constants until the tree fits 65 sample points from a target function. There are three targets to choose from: a fifth order polynomial, a sine wave, and a quadratic with a sine term added.
@@ -43,9 +43,9 @@ Population 50, 100 and 200, crossover 0.6, 0.8 and 1.0, mutation 0.05, 0.1 and 0
 
 ![Fitness over 500 generations for population 200 and crossover 0.8, one line per mutation rate](media/figures/hyperparameter-sweep-pop200-crossover08.png)
 
-### Sphere and Rosenbrock
+### Sphere and Rosenbrock (binary optimisation demo)
 
-The individuals are binary strings, so every variable is 0 or 1. Sphere is the sum of squares and has its minimum at all zeros. Rosenbrock is the sum of 100 (x[i+1] minus x[i] squared) squared plus (1 minus x[i]) squared and has its minimum at all ones. With population 100, crossover 0.8 and mutation 0.1 the GA finds both minima with a fitness of exactly 0 inside 1000 generations.
+This is a binary optimisation demo, not continuous optimisation. The individuals are binary strings and every variable is either 0 or 1, so the GA is searching over bit patterns for the one that minimises each function. Sphere is the sum of squares and has its minimum at all zeros. Rosenbrock is the sum of 100 (x[i+1] minus x[i] squared) squared plus (1 minus x[i]) squared and has its minimum at all ones. With population 100, crossover 0.8 and mutation 0.1 the GA finds both minima with a fitness of exactly 0 inside 1000 generations.
 
 ![Sphere function fitness dropping to 0](media/figures/sphere-convergence.png)
 
@@ -99,7 +99,7 @@ python3 symbolic_regression_gp.py 50 1000 7
 
 - `ga/steady_state_ga.py` the GA library, and the ASCII art demo when run directly.
 - `ga/hyperparameter_analysis.py` the 27 run parameter sweep with its plots.
-- `ga/fitness_functions.py` Sphere and Rosenbrock minimisation.
+- `ga/fitness_functions.py` Sphere and Rosenbrock minimisation over binary valued variables.
 - `ga/santa_riddle.py` the riddle solver.
 - `gp/symbolic_regression_gp.py` the DEAP genetic programming script.
 - `media/figures/` the result plots and screenshots from my runs.
