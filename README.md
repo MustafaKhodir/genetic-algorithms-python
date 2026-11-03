@@ -1,3 +1,5 @@
+<sub>Copyright 2026 Mustafa Khodir. All rights reserved. Photos, videos and designs may not be reused without permission.</sub>
+
 # Genetic Algorithms and Genetic Programming in Python
 
 A steady state genetic algorithm I wrote from scratch and used on four problems, plus a genetic programming project built on DEAP that evolves maths expressions to fit a target curve. Everything is plain Python with numpy and matplotlib for the plots.
@@ -69,10 +71,11 @@ What I took from the GP runs: a bigger population is what matters most, because 
 
 ## Source code
 
-The full source code is kept in a private repository. To review it, [email me](mailto:mkhodir77@gmail.com?subject=Code%20access%3A%20genetic-algorithms-python) with your name, company and GitHub username, and I will give you read access.
+The source code is private. Selected parts are available to employers for technical review. Contact me at [mkhodir77@gmail.com](mailto:mkhodir77@gmail.com).
 
 ## What's in this repo
 
+- `outline/` outline files for the main programs: function names, structure and comments only. The working logic is in the private repository.
 - `media/figures/` the result plots and screenshots from my runs.
 - `media/demo/` the demo recordings, GIFs to watch here and one MP4 with captions.
 
@@ -100,4 +103,4 @@ The same video is in the repo as [genetic-algorithms-demo.mp4](media/demo/geneti
 
 The full project report is available on request.
 
-Copyright 2026 Mustafa Khodir. All rights reserved.
+Copyright 2026 Mustafa Khodir. All rights reserved. Photos, videos and designs may not be reused without permission.
