@@ -1,5 +1,3 @@
-<sub>Copyright 2026 Mustafa Khodir. All rights reserved. Photos, videos and designs may not be reused without permission.</sub>
-
 # Genetic Algorithms and Genetic Programming in Python
 
 A steady state genetic algorithm I wrote from scratch and used on four problems, plus a genetic programming project built on DEAP that evolves maths expressions to fit a target curve. Everything is plain Python with numpy and matplotlib for the plots.
