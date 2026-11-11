@@ -35,6 +35,7 @@ def create_toolbox(PrimitiveSet, TargetFunction, InputPoints):
 def create_mstats_object():
     ...
 
+# Scatter plot of the sample points the GP has to fit
 def plot_dataset(InputPoints, TargetPoints):
     ...
 

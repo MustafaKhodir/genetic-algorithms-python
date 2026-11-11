@@ -28,6 +28,7 @@ class GeneticAlgorithm:
     def better(self, a, b):
         ...
 
+    # Sorts the population and its scores together, best first
     def sort_population(self):
         ...
 
@@ -46,6 +47,7 @@ class GeneticAlgorithm:
     def select_one(self):
         ...
 
+    # Two parents, each from its own tournament
     def select_parents(self):
         ...
 
@@ -60,6 +62,7 @@ class GeneticAlgorithm:
     def evolve(self):
         ...
 
+    # Current best individual and its score
     def best(self):
         ...
 

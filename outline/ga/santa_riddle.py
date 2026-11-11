@@ -5,6 +5,7 @@
 import random
 from steady_state_ga import GeneticAlgorithm
 
+# The number a word spells out under this individual's mapping
 def word_value(individual, word):
     ...
 
@@ -29,6 +30,7 @@ class RiddleGA(GeneticAlgorithm):
     def crossover(self, parent1, parent2):
         ...
 
+    # Completes a child from head with digits taken in order from other
     def fill(self, head, other):
         ...
 
