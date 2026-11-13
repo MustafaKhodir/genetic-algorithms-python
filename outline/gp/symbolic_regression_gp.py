@@ -23,7 +23,9 @@ def create_dataset(target_function):
 def create_primitive_set():
     ...
 
-# Mean error between the tree and the target over all the sample points
+# Mean error between the tree and the target over all the sample points.
+# A tree whose numbers blow up (for example sin of an overflowed value) gets
+# the worst possible score instead of stopping the run.
 def EvaluateSymbolicRegression(individual, toolbox, target_function, input_points):
     ...
 
