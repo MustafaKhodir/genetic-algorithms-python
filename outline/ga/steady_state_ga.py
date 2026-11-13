@@ -24,8 +24,8 @@ class GeneticAlgorithm:
     def fitness(self, individual):
         ...
 
-    # True when score a is better than score b, depending on the direction
-    def better(self, a, b):
+    # True when score is better than other_score, depending on the direction
+    def better(self, score, other_score):
         ...
 
     # Sorts the population and its scores together, best first
@@ -41,7 +41,7 @@ class GeneticAlgorithm:
     def mutate(self, individual):
         ...
 
-    # Tournament selection: pick three at random and keep the best of them.
+    # Tournament selection: pick TOURNAMENT_SIZE at random and keep the best.
     # Tournament works the same whether fitness is being maximised or
     # minimised, which is why I chose it over fitness proportional selection.
     def select_one(self):

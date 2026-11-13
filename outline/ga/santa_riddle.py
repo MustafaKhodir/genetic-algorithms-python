@@ -5,6 +5,10 @@
 import random
 from steady_state_ga import GeneticAlgorithm
 
+# Letter to digit dictionary for an individual
+def letter_mapping(individual):
+    ...
+
 # The number a word spells out under this individual's mapping
 def word_value(individual, word):
     ...
@@ -19,9 +23,8 @@ class RiddleGA(GeneticAlgorithm):
         ...
 
     # How far SANTA - CLAUS is from XMAS. Zero means solved. S, C and X start
-    # their words, so none of them can be zero. Each one that is zero adds a
-    # penalty bigger than any real gap (the words are at most 99999), so a
-    # mapping with a leading zero can never score zero.
+    # their words, so none of them can be zero. Each one that is zero adds
+    # LEADING_ZERO_PENALTY, so a mapping with a leading zero can never score zero.
     def fitness(self, individual):
         ...
 
