@@ -95,7 +95,7 @@ Real runs of my scripts.
 
 All three with captions:
 
-https://github.com/user-attachments/assets/37856f17-ddac-4cf2-97f7-b8052bfbdb66
+https://github.com/user-attachments/assets/2f25d915-0f60-4add-9966-18b017348c3d
 
 The same video is in the repo as [genetic-algorithms-demo.mp4](media/demo/genetic-algorithms-demo.mp4) (57 s).
 
